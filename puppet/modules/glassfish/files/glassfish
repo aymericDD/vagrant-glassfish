@@ -11,13 +11,13 @@ echo $GLASSFISH_HOME
 
 case "$1" in
 start)
-    $GLASSFISH_HOME/bin/asadmin start-domain >/dev/null
+    $GLASSFISH_HOME/bin/asadmin start-domain domain1 >/dev/null
     ;;
 stop)
-    $GLASSFISH_HOME/bin/asadmin stop-domain >/dev/null
+    $GLASSFISH_HOME/bin/asadmin stop-domain domain1 >/dev/null
     ;;
 restart)
-    $GLASSFISH_HOME/bin/asadmin restart-domain >/dev/null
+    $GLASSFISH_HOME/bin/asadmin restart-domain domain1 >/dev/null
     ;;
 \*)
     echo "usage: $0 (start|stop|restart|help)"
