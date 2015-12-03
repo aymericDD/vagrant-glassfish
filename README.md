@@ -15,6 +15,19 @@ Vagrant is a system used for creating and configuring virtual development enviro
  * download [VirtualBox](https://www.virtualbox.org/wiki/Downloads) (used by Vagrant)
  * download [Vagrant](http://downloads.vagrantup.com/)
 
+## Required manual steps after provisioning
+
+1. change admin password of glassfish<br>
+``$ sudo /opt/glassfish4/glassfish/bin/asadmin change-admin-password``
+2. start glassfish<br>
+``$ sudo /etc/init.d/glassfish start``
+3. activate remote access / secure administration<br>
+``$ sudo /opt/glassfish4/glassfish/bin/asadmin enable-secure-admin``
+4. restart glassfish<br>
+``$ sudo /etc/init.d/glassfish restart``
+
+Glassfish should now serve on [http://localhost:8080/](http://localhost:8080/), admin console on [http://localhost:4848/](http://localhost:4848/)
+
 Starting and using the Vagrant box
 ----------------------------------
 1. Download the aforementioned software.
